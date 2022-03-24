@@ -1,0 +1,160 @@
+html {
+    height: 100vh;
+    color: white;
+}
+
+body {
+    height: 500vh;
+    background-color: #080A09 !important;
+}
+
+canvas {
+    position: relative;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    max-width: 100vw;
+    max-height: 100vh;
+}
+
+.meteor {
+    border: 2px solid transparent;
+    border-right: 60px solid #fff;
+    position: absolute;
+    transform-origin: top center;
+    opacity: 0;
+    top: 84px;
+    left: 0;
+    animation-name: meteor-animation;
+    animation-direction: normal;
+    animation-fill-mode: backwards;
+    animation-duration: 8s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+}
+.meteor:after {
+     content: '';
+     position: absolute;
+     top: -2px;
+    right: -64px;
+     height: 4px;
+     width: 4px;
+     border-radius: 100%;
+     background: #fff;
+     transform: translateX(-50%);
+     box-shadow: 0 0 15px 0 #fff;
+ }
+
+ .bg-blur{
+     background: rgba(255,255,255,0.02);
+     backdrop-filter: blur(1px);
+ }
+ @keyframes meteor-animation {
+     0% {
+         left: 0%;
+         opacity: 0;
+     }
+     12.5%{opacity: 0.5}
+     25%{
+         opacity: 0;}
+     37.5%{
+         opacity: 0.5;
+     }
+     50%{
+         left: 50%;
+         opacity: 0;
+     }
+     /*62.5%{*/
+     /*    opacity: 0.5;*/
+     /*}*/
+     /*75%{opacity: 0}*/
+     87.5%{
+         opacity: 0.5;
+     }
+     100%{
+         left: 100%;
+         opacity: 0;
+
+     }
+
+
+ }
+
+ .fullscreen{
+     right: 0;
+     bottom: 0;
+     width: 100%;
+ }
+ .z-1{
+     z-index: 100;
+
+ }
+
+ .image-class{
+     position: fixed;
+     z-index: 10;
+     object-fit: cover;
+     top: 0;
+     left: 0;
+     height: 100vh;
+     width: 100%;
+     background-image: url("./../assets/image-2.png");
+     background-size: cover;
+     transition: transform;
+ }
+ .image-class .content{
+     height: 100%;
+ }
+ .image-class .content h1{
+     display: block;
+ }
+ .element4-image{
+     max-width: 200px ;
+ }
+ .element1-container{
+     display: flex;
+     flex-direction: row;
+     justify-content: center;
+     align-content: center;
+     align-items: center;
+     height: 100%;
+ }
+ .element1-image{
+     max-width: 300px;
+
+ }
+ .space-100{
+     height: 100px;
+ }
+ .line-30{
+     border: 1px red solid;
+     max-width: 30%;
+ }
+ .body{
+     border: 1px red solid;
+     margin-bottom: 30px;
+ }
+ .row41 .f1,.row41 .f2,.row41 .f3{
+     border: 1px blue solid;
+ }
+ .f2 h1{
+font-size: 100px;
+     white-space: nowrap;
+     display: compact;
+ }
+ .gap-180{
+     height: 180px !important;
+ }
+ .works{
+     position: fixed;
+     left: 100%;
+ }
+ #work-1{
+     transition: transform 0.5s;
+ } #work-2{
+     transition: transform 0.5s;
+ } #work-3{
+     transition: transform 0.5s;
+ } #work-0{
+     transition: transform 0.5s;
+ }
