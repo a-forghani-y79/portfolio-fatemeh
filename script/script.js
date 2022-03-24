@@ -1,4 +1,3 @@
-// let image = document.getElementById('image');
 // window.onscroll=function (e){
 //     let y = window.scrollY;
 //     console.log('current y:'+y);
@@ -49,7 +48,10 @@ function getScale(percent){
         return '';
     return 'scale('+percent+'%)';
 }
+
+let image = document.getElementById('image');
 let works = document.getElementById('works');
+let video = document.getElementById('video');
 let work0 = document.getElementById('work-0');
 let work1 = document.getElementById('work-1');
 let work2 = document.getElementById('work-2');
@@ -59,13 +61,22 @@ let work3 = document.getElementById('work-3');
 window.onscroll=()=>{
     console.log(window.scrollY);
     let y = window.scrollY;
-    works.style.left=x(200,800,100,0,y)+'%';
+    // part one
+    // zoom and move and fade welcome image
+    image.style.backgroundSize= x(100,400,130,160,y)+'%';
+    image.style.backgroundPositionX= x(100,400,0,70,y)+'%';
+    image.style.opacity=x(300,400,100,0,y)+'%';
+
+    //part two
+    //move video left and projects come in
+    works.style.left=x(900,1800,100,0,y)+'%';
+    video.style.left=x(900,1800,0,-100,y)+'%';
     work0.style.transform=getScale(100+x2(0,150,50,y));
     work1.style.transform=getScale(100+x2(150,450,50,y));
     work2.style.transform=getScale(100+x2(950,1050,50,y));
     work3.style.transform=getScale(100+x2(1300,1600,50,y));
 
-    console.log('x:'+x(300,400,100,200,y));
+    console.log('x:'+x(100,400,130,160,y));
 
 }
 

@@ -98,9 +98,12 @@ canvas {
      left: 0;
      height: 100vh;
      width: 100%;
-     background-image: url("./../assets/image-2.png");
-     background-size: cover;
+     background-image: url("./../assets/welcom.png");
      transition: transform;
+
+     background-size: 130%;
+     background-position-y: 40%;
+
  }
  .image-class .content{
      height: 100%;
